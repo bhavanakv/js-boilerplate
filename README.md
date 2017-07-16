@@ -21,4 +21,12 @@ Express is the choice of dev server, though there are alternatives:
 * Webpack Dev Server is useful when using Webpack for bundling
 * BrowserSync is helpful for cross-browser testing, supporting synced interactions
 
-
+## Sharing Work-in-Progress
+Localtunnel is used to share work. Alternatives are
+* ngrok also allows for secure tunneling
+* Now uploads the work to a cloud provider to production.
+To share work, start the Express server, and in another terminal, type
+```
+lt --port 9000 --subdomain <preferred subdomain>
+```
+BrowserSync works with Localtunnel as well.
