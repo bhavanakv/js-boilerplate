@@ -1,15 +1,26 @@
-import express from 'express';
-import path from 'path';
-import open from 'open';
+import express from "express";
+import path from "path";
+import open from "open";
 
-let port = 9000;
-let app = express();
+// Used for transpiling
+import webpack from "webpack";
+import config from "../webpack.config.dev";
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../src/index.html'));
+const port = 9000;
+const app = express();
+const compiler = webpack(config);
+
+// Use Webpack middleware
+app.use(require("webpack-dev-middleware")(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+}));
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../src/index.html"));
 });
 
 app.listen(port, (err) => {
     if (err) throw err;
-    open('http://localhost:' + port);
+    open("http://localhost:" + port);
 });

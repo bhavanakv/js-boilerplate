@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "prestart": "babel-node build_scripts/startMessage.js",
-      "start": "npm-run-all --parallel security-check server",
-      "server": "babel-node build_scripts/server.js",
-      "security-check": "nsp check",
-      "localtunnel": "lt --port 9000",
-      "share": "npm-run-all --parallel server localtunnel"
+    "prestart": "babel-node build_scripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check server lint:watch",
+    "server": "babel-node build_scripts/server.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 9000",
+    "share": "npm-run-all --parallel server localtunnel",
+    "lint": "esw webpack.config.* src build_scripts",
+    "lint:watch": "npm run lint -- --watch"
   },
   "dependencies": {
     "whatwg-fetch": "1.0.0"
@@ -40,9 +42,9 @@
     "nock": "^9.0.13",
     "npm-run-all": "^4.0.2",
     "nsp": "^2.6.3",
-    "numeral": "^2.0.6",
     "open": "^0.0.5",
     "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.3.0",
     "webpack-dev-middleware": "^1.11.0",

@@ -35,4 +35,20 @@ BrowserSync works with Localtunnel as well.
 NPM scripts are used in this boilerplate, but Gulp is a good alternative. `npm-run-all` is used to run tasks parallely.
 
 ## Transpiling
-Babel is used for transpiling. TypeScript and Elm are other alternatives.
+Babel is used for transpiling. TypeScript and Elm are other alternatives. To use React, add `"react"` to the `presets` array in `.babelrc`, and run
+```
+npm i --save-dev babel-preset-react eslint-plugin-react
+```
+Then add
+```
+"plugins: [
+    "react"
+]
+```
+to the `.eslintrc` file.
+
+## Bundling
+Webpack is used over Browserify.
+
+## Linting
+An ESLint config file, `.eslintrc`, has been provided. `eslint-watch` is used to monitor constantly.
