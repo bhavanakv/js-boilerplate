@@ -33,3 +33,6 @@ BrowserSync works with Localtunnel as well.
 
 ## Automation Tool
 NPM scripts are used in this boilerplate, but Gulp is a good alternative. `npm-run-all` is used to run tasks parallely.
+
+## Transpiling
+Babel is used for transpiling. TypeScript and Elm are other alternatives.

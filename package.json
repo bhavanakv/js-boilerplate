@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "prestart": "node build_scripts/startMessage.js",
+      "prestart": "babel-node build_scripts/startMessage.js",
       "start": "npm-run-all --parallel security-check server",
-      "server": "node build_scripts/server.js",
+      "server": "babel-node build_scripts/server.js",
       "security-check": "nsp check",
       "localtunnel": "lt --port 9000",
       "share": "npm-run-all --parallel server localtunnel"
