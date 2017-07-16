@@ -7,7 +7,7 @@ The following is the setup used in this boilerplate.
 ## EditorConfig
 EditorConfig is the choice of editor configuration management. The settings in the file use spaces for indenting, and an indent size of 4.
 
-# Vulnerability Checking
+## Vulnerability Checking
 The boilerplate uses Node Security Platform to check for vulnerabilities. Run
 ```
 sudo npm i -g nsp
