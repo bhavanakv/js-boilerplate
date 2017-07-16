@@ -30,3 +30,6 @@ To share work, start the Express server, and in another terminal, type
 lt --port 9000 --subdomain <preferred subdomain>
 ```
 BrowserSync works with Localtunnel as well.
+
+## Automation Tool
+NPM scripts are used in this boilerplate, but Gulp is a good alternative. `npm-run-all` is used to run tasks parallely.

@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+      "prestart": "node build_scripts/startMessage.js",
+      "start": "npm-run-all --parallel security-check server",
+      "server": "node build_scripts/server.js",
+      "security-check": "nsp check",
+      "localtunnel": "lt --port 9000",
+      "share": "npm-run-all --parallel server localtunnel"
+  },
   "dependencies": {
     "whatwg-fetch": "1.0.0"
   },
