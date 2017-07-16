@@ -14,3 +14,11 @@ sudo npm i -g nsp
 nsp check
 ```
 to check for vulnerabilities manually.
+
+## Dev Server
+Express is the choice of dev server, though there are alternatives:
+* Budo is useful if using Browserify as the bundler
+* Webpack Dev Server is useful when using Webpack for bundling
+* BrowserSync is helpful for cross-browser testing, supporting synced interactions
+
+
