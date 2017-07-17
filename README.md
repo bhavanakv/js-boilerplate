@@ -1,4 +1,5 @@
 # JavaScript Boilerplate
+[![Build Status](https://travis-ci.org/yrahul3910/js-boilerplate.svg?branch=master)](https://travis-ci.org/yrahul3910/js-boilerplate)
 This boilerplate is taken from [Cory House's Pluralsight course](https://app.pluralsight.com/library/courses/javascript-development-environment/table-of-contents).
 
 # Configurations
