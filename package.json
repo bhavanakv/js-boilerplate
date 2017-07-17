@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "prestart": "babel-node build_scripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check server lint:watch",
+    "start": "npm-run-all --parallel security-check server lint:watch test:watch",
     "server": "babel-node build_scripts/server.js",
     "security-check": "nsp check",
-    "localtunnel": "lt --port 9000",
+    "localtunnel": "lt --port 8000",
     "share": "npm-run-all --parallel server localtunnel",
     "lint": "esw webpack.config.* src build_scripts",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress build_scripts/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm test -- --watch"
   },
   "dependencies": {
     "whatwg-fetch": "1.0.0"

@@ -1,9 +1,7 @@
 import path from "path";
 
 export default {
-    debug: true,
     devtool: "inline-source-map",
-    noInfo: false,
     entry: [
         path.resolve(__dirname, "src/index")
     ],
@@ -15,9 +13,9 @@ export default {
     plugins: [],
     module: {
         loaders: [
-            {test: /\.js$/, exclude: /node_modules/, loaders: ["babel"]},
-            {test: /\.css$/, loaders: ["style","css"]},
-            {test: /\.sass$/, loaders: ["sass"]}
+            {test: /\.js$/, exclude: /node_modules/, loaders: ["babel-loader"]},
+            {test: /\.css$/, loaders: ["style-loader","css-loader"]},
+            {test: /\.sass$/, loaders: ["sass-loader"]}
         ]
     }
 };
