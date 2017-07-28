@@ -57,3 +57,6 @@ An ESLint config file, `.eslintrc`, has been provided. `eslint-watch` is used to
 ## Testing
 Mocha is used for automated unit testing. Jest is a framework by Facebook that's a wrapper around Jasmine, and is useful with React. Jest has assertion built in, but since Mocha doesn't, Chai is used for assertion.
 JSDOM and Cheerio are the helper libraries used. Travis CI is used as the CI server. 
+
+## HTTP Calls
+JSON Schema Faker, JSON Server are used to mock HTTP calls. The files under `src/api`, `build_scripts/generateMockData.js`, `build_scripts/mockDataSchema.js`, and `src/index.js` are wired up for this functionality. `src/api/db.json` is an example output of the mock data generated. The endpoint `/users` in `build_scripts/server.js` is intended for production.
