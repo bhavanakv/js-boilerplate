@@ -59,4 +59,6 @@ Mocha is used for automated unit testing. Jest is a framework by Facebook that's
 JSDOM and Cheerio are the helper libraries used. Travis CI is used as the CI server. 
 
 ## HTTP Calls
-JSON Schema Faker, JSON Server are used to mock HTTP calls. The files under `src/api`, `build_scripts/generateMockData.js`, `build_scripts/mockDataSchema.js`, and `src/index.js` are wired up for this functionality. `src/api/db.json` is an example output of the mock data generated. The endpoint `/users` in `build_scripts/server.js` is intended for production.
+JSON Schema Faker, JSON Server are used to mock HTTP calls.  
+
+The files under `src/api`, `build_scripts/generateMockData.js`, `build_scripts/mockDataSchema.js`, and `src/index.js` are wired up for this functionality. `src/api/db.json` is an example output of the mock data generated. The endpoint `/users` in `build_scripts/server.js` is intended for production.
