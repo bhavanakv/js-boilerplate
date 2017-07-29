@@ -25,7 +25,7 @@ Express is the choice of dev server, though there are alternatives:
 ## Sharing Work-in-Progress
 Localtunnel is used to share work. Alternatives are
 * ngrok also allows for secure tunneling
-* Now uploads the work to a cloud provider to production.
+* Now uploads the work to a cloud provider to production.  
 To share work, start the Express server, and in another terminal, type
 ```
 lt --port 9000 --subdomain <preferred subdomain>
@@ -55,10 +55,16 @@ Webpack is used over Browserify.
 An ESLint config file, `.eslintrc`, has been provided. `eslint-watch` is used to monitor constantly.
 
 ## Testing
-Mocha is used for automated unit testing. Jest is a framework by Facebook that's a wrapper around Jasmine, and is useful with React. Jest has assertion built in, but since Mocha doesn't, Chai is used for assertion.
+Mocha is used for automated unit testing. Jest is a framework by Facebook that's a wrapper around Jasmine, and is useful with React. Jest has assertion built in, but since Mocha doesn't, Chai is used for assertion.  
+
 JSDOM and Cheerio are the helper libraries used. Travis CI is used as the CI server. 
 
 ## HTTP Calls
 JSON Schema Faker, JSON Server are used to mock HTTP calls.  
 
 The files under `src/api`, `build_scripts/generateMockData.js`, `build_scripts/mockDataSchema.js`, and `src/index.js` are wired up for this functionality. `src/api/db.json` is an example output of the mock data generated. The endpoint `/users` in `build_scripts/server.js` is intended for production.
+
+## Production Build
+The files `webpack.config.prod.js` and `build_scripts/build.js` minify the JS code and write to `/dist`.  
+
+The `build_scripts/distServer.js` file serves from the `/dist` folder. It's not intended for actual production, but rather to host locally for debugging to make sure the production build works.
